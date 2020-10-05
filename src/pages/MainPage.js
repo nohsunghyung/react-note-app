@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Api from "../utils/Api";
 
+// 메인페이지
 class MainPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  componentDidMount() {
+    Api.get("posts").then((res) => {
+      console.log(res);
+    });
+  }
   render() {
     return (
       <div>
