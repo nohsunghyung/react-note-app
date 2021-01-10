@@ -26,9 +26,6 @@ class Signup extends Component {
       password: this.state.password,
       nickname: this.state.nickname,
     };
-    // Api.post("http://localhost:3000/signup", apiParams).then((res) => {
-    //   console.log(res);
-    // });
     Api.post("signup", apiParams).then((res) => {
       alert(
         `${res.data.username}님 가입축하드립니다.로그인페이지로 이동합니다.`
